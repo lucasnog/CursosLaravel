@@ -226,7 +226,6 @@
 
     @yield('scripts')
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/chart.umd.min.js"></script>
     <script src="/js/dashboard.js"></script>
