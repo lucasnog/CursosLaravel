@@ -47,7 +47,7 @@ class ClientesController extends Controller
         return view('pages.clientes.create');
     }
 
-    public function atualizarCliente(FormRequestCliente $request, $id)
+    public function atualizarCliente(Request $request, $id)
     {
         if ($request->method() == "PUT") {
             //atualiza os dados
