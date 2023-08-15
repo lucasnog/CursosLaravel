@@ -29,7 +29,7 @@ class ProdutosController extends Controller
         $id = $request->id;
         $buscaregistro = Produto::find($id);
         $buscaregistro->delete();
-
+        Toastr::success('Produto deletado com sucesso');
         return response()->json(['sucess' => true]);
     }
 
@@ -40,7 +40,7 @@ class ProdutosController extends Controller
             $componentes = new Componentes();
             $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
             Produto::create($data);
-            Toastr::
+            Toastr::success('Gravado com sucesso');
             return redirect()->route('produto.index');
         }
 
@@ -58,6 +58,7 @@ class ProdutosController extends Controller
             $buscaProduto = Produto::find($id);
             $buscaProduto->update($data);
             Toastr::success('Gravado com sucesso');
+
             return redirect()->route('produto.index');
         }
 
